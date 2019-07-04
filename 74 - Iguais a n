@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#define quantia 101
+
+int main() {
+    int numeros[quantia], x;
+    for(x = 0; x < quantia; x++){
+        scanf("%d", &numeros[x]);
+    }
+    for(x=0; x<quantia - 1; x++){
+        if(numeros[x] == numeros[100]){
+            printf("%d\n", x);
+        }
+    }
+	return 0;
+}
