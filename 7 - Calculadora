@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    double a, b, c;
+    char op;
+    
+    scanf("%lf", &a);
+    scanf("%lf", &b);
+    scanf(" %s", &op);
+    
+    switch (op){
+        case '+': c=a+b;
+            printf("%.3lf\n", c); break;
+        case '-': c=a-b;
+            printf("%.3lf\n", c); break;
+        case '*': c=a*b;
+            printf("%.3lf\n", c); break;
+        case '/':
+            if(b==0){
+                printf("operacao nao pode ser realizada\n");
+            }
+            else{
+                c=a/b;
+                printf("%lf", c);
+            }
+    }
+    while(op!='&'){
+        scanf("%lf %s", &a, &op);
+        switch (op){
+        case '+': c=a+c;
+            printf("%.3lf\n", c); break;
+        case '-': c=c-a;
+            printf("%.3lf\n", c); break;
+        case '*': c=c*a;
+            printf("%.3lf\n", c); break;
+        case '/':
+            if(a==0){
+                printf("operacao nao pode ser realizada\n");
+            }
+            else{
+                c=c/a;
+                printf("%.3lf\n", c);
+            } break;
+        
+    }
+    
+ 
+}
+return 0;
+}
