@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+   
+    int v[3001]={0}, n, i, aux, v2[3001]={0}, v3[3001]={0}, j, jolly=0;
+    
+   while(scanf("%d", &n)!=EOF){
+ 
+   jolly=0;
+   
+    if(n==1){
+        printf("Jolly\n");
+    }
+    else{ 
+      for(i=0; i<n; i++){
+        scanf("%d", &v[i]);
+    }
+   
+    for(j=0; j<n-1; j++){
+        
+    v2[j]=abs(v[j]-v[j+1]);
+    }
+    for(i=0; i<n-1; i++){
+        for(aux=i+1; aux<n-1; aux++){
+            if(v2[aux]>v2[i]){
+                v3[i]=v2[aux];
+                v2[aux]=v2[i];
+                v2[i]=v3[i];
+            }
+        }
+    }
+    for(i=0; i<n-2; i++){
+       if(v2[i]-v2[i+1]!=1){
+           jolly=1;
+           break;
+       } 
+       else{
+           jolly=0;
+       }
+    }                  
+    if(jolly==0){
+        printf("Jolly\n");
+    }
+    else{
+        printf("Not jolly\n");
+    }
+    for(i=0; i<n; i++){
+        
+        v[i]=0;
+    }
+   }
+   }
+	return 0;
+}
