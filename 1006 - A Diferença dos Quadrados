@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b, c;
+    scanf("%d", &a);
+    while(a>0){
+        
+        b=(a+1)/2;
+        c=(a-1)/2;
+        printf("%d - %d\n", b*b, c*c);
+        scanf("%d", &a);
+    }
+	return 0;
+}
