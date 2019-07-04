@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
+#include <stdlib.h>
+
+int main(){
+	int	p1,p2,p3,I,i,R,x=0,k,y=0, z=0;
+	scanf("%d %d %d %d %d", &p1, &p2, &p3, &I, &R);
+
+	for(i=I;i<=R;i++){
+		k=i;
+		if(k%p1 == 0 || k%p2 == 0 || k%p3 == 0){
+			while(k > 1){
+				if(k%p1 == 0){
+					k = k/p1;
+				}
+				else if(k%p2 == 0){
+					k = k/p2;
+				}
+				else if(k%p3 == 0){
+					k = k/p3;
+				}
+				else{
+					break;
+				}
+				if(k == 1){
+					x++;
+					z = i;
+					if(x == 1) y = i;
+				    }
+				}
+			}
+		}
+		printf("%d %d %d", x, y, z);
+    return 0;
+	}
