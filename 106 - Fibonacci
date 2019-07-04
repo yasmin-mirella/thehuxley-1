@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int ant=0, atual=1, n, i, proximo;
+    
+    
+    while(scanf("%d", &n), n!=0){
+        
+        if(n>=1) printf("%d", ant);
+        if(n>=2) printf(" %d", atual);
+    
+    for(i=3; i<=n; i++){
+        
+        proximo = ant + atual;
+        printf(" %d", proximo);
+        ant = atual;
+        atual = proximo;
+    
+    }
+    printf("\n");
+    ant=0;
+    atual=1;
+    }
+	return 0;
+}
