@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int N, C, S, E, i, x, y=0;
+    scanf("%d %d", &N, &C);
+    for(i=0; i<N; i++){
+        scanf("%d %d", &S, &E);
+        x =(x - S) + E;
+        if(x>C) y++;
+    }
+    if(y==0) printf("N");
+    else {printf("S");}
+    
+    
+        
+    
+	return 0;
+}
