@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a, b, c, x, y, z;
+    scanf("%d%d%d", &a, &b, &c);
+    x=a%2;
+    y=b%2;
+    z=c%2;
+       if(a==0||b==0||c==0){
+        printf("Nao"); return 0;
+    }
+    else if(a>10||b>10||c>10){
+        
+        if((a>10&&y==0)||(a>10&&z==0)){
+            printf("Sim"); return 0;
+        }
+        else if((b>10&&x==0)||(b>10&&z==0)){
+            printf("Sim"); return 0;
+        }
+        
+        else if((c>10&&x==0)||(y==0&&c>10)){
+            printf("Sim"); return 0;
+        }
+        else{
+            printf("Nao"); return 0;
+        }
+    }
+ 
+    else{
+        printf("Nao");
+    }
+	return 0;
+}
