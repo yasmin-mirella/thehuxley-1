@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+int main() {
+
+    int n, m, v;
+    int y=0;  
+    int nota[1000]={0}, i, aux=0, j, vetor[1001]={0};
+    
+        scanf(" %d", &m);
+       
+
+for(v=0; v<m; v++){   
+	
+	aux=0; 
+	 scanf(" %d", &n);
+	 
+	for(i=0; i<n; i++){
+	   
+	        scanf(" %d", &nota[i]);
+	        vetor[i]=nota[i];
+	        
+	    
+	}
+	     for( i=0; i<n-1; i++){
+   	        for( j=0; j<n-1; j++){
+	        
+	       
+	       if(nota[j] < nota[j+1]){
+	       
+	        aux = nota[j];
+	        nota[j] = nota[j+1];
+            nota[j+1] = aux;	 
+            
+	       }  
+            	  
+	    }
+	    
+}
+	 for(i=0;i<n;i++){
+	     if(vetor[i]==nota[i]){
+	         y++;
+	     }
+	 }
+	    printf("%d\n", y);
+	  
+           
+           for(i=0; i<n; i++){
+                 
+               nota[i]=0; vetor[i]=0;
+           }        
+            y=0; 
+}		 
+   
+	return 0;
+
+}
