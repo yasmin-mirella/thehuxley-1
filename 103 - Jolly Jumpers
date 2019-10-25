@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main(void) {
    
     int v[3001]={0}, n, i, aux, v2[3001]={0}, v3[3001]={0}, j, jolly=0;
     
