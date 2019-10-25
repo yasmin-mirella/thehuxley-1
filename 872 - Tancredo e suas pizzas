@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main(void) {
     
     int teste, i, n, a, aux, x, tam, y, j;
     
