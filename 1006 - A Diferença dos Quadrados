@@ -3,7 +3,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main() {
+int main(void) {
     int a, b, c;
     scanf("%d", &a);
     while(a>0){
