@@ -4,10 +4,11 @@
 #include <stdlib.h>
 
 int main(void) {
-    int a, b, c;
+    int a, b, c, d;
     scanf("%d", &a);
     while(a>0){
         
+	d=0;
         b=(a+1)/2;
         c=(a-1)/2;
         printf("%d - %d\n", b*b, c*c);
